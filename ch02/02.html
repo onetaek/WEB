@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("10/3의 몫:"+parseInt(10/3),"<br>");
+        document.write("10/3의 나머지:"+10%3,"<br>")
+        document.write("10%2==0","<br>")
+        document.write(parseInt(Math.random()*10)%6)
+        //0~5사이의 숫자가 랜덤으로 나오게됨
+        document.write("<hr>")
+
+        //복합대입연산자( a+=b , a-=b a*=b a/*=b a%=b )
+        var a=10; var b=20;
+        a+=b; //a=a+b;
+        //증감연산자(++a , --a , a++ , a--) 
+        //전치연산(++a,--a) : 변수안의 값을 먼저 증가 시킨 후 나머지 연산 처리
+        //후치연산(a--,a++) : 다른 연산처리 이후에 증감연산 처리
+        a=10,b=20,c=0,d=0;
+        c=++a + b--; //
+        d=a++ + --b; //
+        document.write("C : " + c + "<br>D : " + d);
+        document.write("<br>");
+        document.write("<hr>");
+
+        //비교연산자(  == , > , >= ,< , <= , != , ===  )
+        var n1=10; var n2="10";
+        //document.write(n1+n2); //문자열 + 숫자 --> 문자열로 형변환
+        //document.write(n1==n2);// 문자열 == 숫자 --> 값자체비교 
+        document.write(n1===n2); // 값자체 비교 + 자료형 일치여부 확인
+        document.write("<hr>");
+
+        //논리연산자(&& , ||)
+        var var1=10; var var2=20;
+       //document.write(var1>=10 && var2>=10);
+        document.write(var1>=10 || var2>=10);
+    </script>
+</body>
+</html>
