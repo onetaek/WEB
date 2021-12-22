@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>name : <span id="name"></span></div>
+    <div>age : <span id="age"></span></div>
+    <div>height : <span id="height"></span></div>
+    <div>weight : <span id="weight"></span></div>
+    <div>address : <span id="address"></span></div>
+    <div>gender : <span id="gender"></span></div>
+    <button onclick="student.introduce()">소개</button>
+
+    <script>
+        let student = {
+            name : "오원택",
+            age : 24,
+            height : 175.5,
+            weight : 75,
+            address : "경산",
+            gender : "MEN",
+            introduce : function(){
+                alert("제이름은 "+this.name+"이고 나이는"+this.age+"살 입니다.")
+            } 
+        }
+        document.getElementById("name").innerHTML = student.name;
+        document.getElementById("age").innerHTML = student.age;
+        document.getElementById("height").innerHTML = student.height;
+        document.getElementById("weight").innerHTML = student.weight;
+        document.getElementById("address").innerHTML = student.address;
+        document.getElementById("gender").innerHTML = student.gender;
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //delete연산자 : 멤버 제거에 사용
+        let person = {
+            name: "오원택",
+            age: 24,
+            height: 180,
+            weight: 80,
+            address: "대구",
+            gender: "M",
+            introduce : function(){
+                alert(this.name+"\n"+this.age+"\n"+this.height+"\n"+
+                this.weight+"\n"+this.address+"\n"+this.gender+"\n")
+            },
+            talk : function(){
+                document.write(this.name + "님이 말합니다<br>")
+            }
+        }
+        delete person.age; // age 속성 제거
+        delete person.talk; //talk 기능 제거
+        person.introduce();
+        
+        //delete 배열 요소 제거
+        let arr = [1,2,3];
+        delete arr[1];
+        document.write(arr+"<br>");
+        document.write(typeof arr[0]+"<br>");
+        document.write(typeof arr[1]+"<br>");
+        document.write(typeof arr[2]+"<br>");
+        document.write(arr.length);//제거해도 길이가3이네?
+
+    </script>
+</body>
+</html>

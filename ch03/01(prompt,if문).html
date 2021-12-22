@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ko = parseInt(prompt("typing korean score"));
+        eng = parseInt(prompt("typing math score"));
+        math = parseInt(prompt("typing math score"));
+        avg = (ko + eng +math)/3;
+        if(ko < 40){
+            alert("fail");
+        }else if(eng < 40){
+            alert("fail");
+        }else if(math < 40){
+            alert("fail");
+        }else if(avg < 60){
+            alert("fail");
+        }else{
+            alert("pass");
+        }
+    </script>
+</body>
+</html>
