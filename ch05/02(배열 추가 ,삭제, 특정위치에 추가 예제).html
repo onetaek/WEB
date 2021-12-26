@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //카페음료 배열 요소 4개만들기
+        cafe = ["라때","아메리카노","에이드","스무디"];
+        //배열 끝에 하나넣기
+        cafe.push("에스프레소");
+        //2번째요소 뒤에 있는 요소 한개삭제
+        cafe.splice(1,1);
+        //3번째 요소 뒤에 하나 추가
+        cafe.splice(2,0,"카라멜마끼야또");
+        //배열을 ul li를 이요하여 출력
+        document.write("<ul>")
+        for(i in cafe){
+            document.write("<li>"+cafe[i]+"</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
+</html>
