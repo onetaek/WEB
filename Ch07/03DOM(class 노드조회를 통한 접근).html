@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class 노드조회  -->
+
+    <ul>
+        <li class="c1">첫번째 리스트</li>
+        <li>두번째 리스트</li>
+        <li class="c1">세번째 리스트</li>
+        <li class="c1">네번째 리스트</li>
+        <li>다섯번째 리스트</li>
+        <li class="c1">여섯번째 리스트</li>
+    </ul>
+    <p class=c1>
+        p태그 단락입니다~
+    </p>
+    
+    <script>
+        var c1 = document.getElementsByClassName("c1");
+        document.write("길이 : " + c1.length);
+        // c1[0].style.backgroundColor="lightgray";
+        // c1[2].style.backgroundColor="lightgray";
+        for(i=0;i<c1.length;i++){
+            c1[i].style.backgroundColor="lightgray";
+        }
+    </script>
+</body>
+</html>

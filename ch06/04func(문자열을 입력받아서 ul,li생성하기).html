@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //prompt로 리스트문자열을 5를 입력받아
+        function createUl(){
+            let arr=Array();
+            for(i=0;i<5;i++){
+                arr[i] = prompt((i+1)+"번째 li의 문자열을 입력하시오."); 
+            }
+
+            code = "<ul style='list-style:none;width:200px;padding:0px;'>"
+                for(i=0;i<arr.length;i++){
+                    code+="<li style='height:30px; margin:2px 0px;background-color:lightgray;'>"+arr[i]+"</li>";
+                }
+            code += "</ul>";
+            var tg = document.getElementById("insertUl");
+            tg.innerHTML = code;
+        }
+    </script>
+    <button onclick="createUl()">UL생성</button>
+    <hr>
+    <div id="insertUl"></div>
+</body>
+</html>

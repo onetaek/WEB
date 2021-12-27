@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{width:50px; height:50px; border:1px solid gray; }
+    input{width:85%;outline:none;border:0px;}
+    button{width:100%;height:100%;}
+</style>
+<body>
+    <script>
+        i=1; tid=1;
+        function addRow(){
+            tbltg=document.getElementById("tbl");//연결할 테이블 찾기
+            trtg=document.createElement("tr");//tr생성
+            trtg.id="tr"+(tid);
+            td1=document.createElement("td");//td생성
+            td1.innerHTML=i++;
+            td2=document.createElement("td");
+            td2.innerHTML=i++;
+            td3=document.createElement("td");
+            btn=document.createElement("button");//삭제버튼 추가
+            btn.setAttribute('onclick',"remove(tr"+tid+")");//setAttribute onclick추가
+            btn.innerHTML="-";
+            td3.append(btn);//삭제버튼을 마지막 td에 연결
+            trtg.append(td1,td2,td3);//tr에 td연결하기
+            tbltg.append(trtg);//table에 tr연결하기
+            tid++;
+        }
+        function remove(tmp){
+            tmp.remove();
+        }
+    </script>
+
+    <table id="tbl">
+        <tr>
+            <td><input></td>
+            <td><input></td>
+            <td><button onclick="addRow()">+</button></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addP()">P태그 추가</button>
+    <hr>
+    <div id="div">
+
+    </div>
+    <script>
+        i=1;
+        function addP(){
+            ptg=document.createElement("p");// 새노드 추가(createElement() : 요소추가)
+            ptg.innerHTML = i+"번째 추가 P태그";// 새노드에 내용입력
+            divtg=document.getElementById("div");// 기존노드 찾기
+            //기존노드에 새노드 연결(append():노드마지막에 연결하기함수)
+            //append() 마지막 연결(여러개 동시 삽입가능)
+            //prepend() 처음에 연결(여러개 동시 삽입가능)
+            //appendChild() 마지막 연결(단일 요소만)
+            divtg.prepend(ptg);
+            i++;
+        }
+    </script>
+</body>
+</html>

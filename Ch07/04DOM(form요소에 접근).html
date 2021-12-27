@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form 요소에 접근 -->
+    <form>
+        <input type="text" name="userid" value="test1234"> 
+        <input type="password" name="pwd" value="1234">
+        <input type="radio" name="gender" value="Man"> 남 
+    </form>
+    <form>
+        <input type="text" name="userid" value="user0987">
+        <input type="password" name="pwd" value="0987">
+    </form>
+    <form id="frm3">
+        <input type="text" name="userid" value="user0987">
+        <input type="password" name="pwd" value="0987">
+    </form>
+    <script>
+        // 현제 페이지의 모든 폼을 받고 첫번째 폼의 3개의 value를 출력한다.
+        var forms = document.forms;
+        document.write(forms[0][0].value+"<br>");
+        document.write(forms[0][1].value+"<br>");
+        document.write(forms[0][2].value+"<br><br>");
+
+        //aler으로 두번째form의 userid와 pwd의 value 를 출력합니다~
+        alert(forms[1][0].value+" "+forms[1][1].value);
+
+        //id부여해서 form 에 접근 
+        var frm3 = document.getElementById("frm3");
+        alert(frm3[0].value);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수기본
+        function sum(num1,num2){
+            return num1 + num2;
+        }
+        console.log(sum(10,20));
+        console.log(sum(25,15));
+
+        //함수의 네가지 형태
+        //매개변수 o , return o - 일반자판기
+        //매개변수 x , return o - 공짜자판기
+        //매개변수 o , return x - 전등스위치
+        //매개변수 x , return x - ???
+
+        //매개변수 x , return o
+        function sum1(){
+            //값을 어떻게 받지?
+            n1 = prompt("첫번 째 값을 입력하시오.");
+            n2 = prompt("두번 째 값을 입력하시오.");
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            return n1 + n2;
+        }
+        document.write("sum1()합수의 결과: "+sum1());
+
+        //매개변수 o , return x
+        function sum2(number1,number2){
+            //입력은 매개변수로 받음
+            alert("sum2()함수의 결과: "+number1 + number2);
+        }
+        sum2(350,200);
+
+        // 매개변수 x , return x;
+        function sum3(){
+            //매개변수가 없어서 prompt로 입력을 받음
+            numb1 = prompt("첫번 째 값을 입력하시오.");
+            numb2 = prompt("두번 째 값을 입력하시오.");
+            numb1 = parseInt(numb1);
+            numb2 = parseInt(numb2);
+            alert(n1 + n2);
+        }
+        sum3();//출력이 없으므로(return)sum3()함수를 호출
+    </script>
+</body>
+</html>
