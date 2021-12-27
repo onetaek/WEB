@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            height: 5000px;
+        }
+    </style>
+    <script>
+        // 스크롤 상단위치
+        // console.log("Top"+document.documentElement.scrollTop);
+        document.addEventListener('scroll',function(){
+            console.log("Top"+document.documentElement.scrollTop);
+            var curpos=document.documentElement.scrollTop;
+            if(curpos>=100 && curpos<=150){
+                alert("Top 100위치를 초과함")
+            }
+        })
+    </script>
+</body>
+</html>

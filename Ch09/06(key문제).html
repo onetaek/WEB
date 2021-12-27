@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        커서이동에 따른 이벤트 처리
+        up:38
+        down:40
+        left:37
+        right:39
+    -->
+    <style>
+        td{width:50px; height:50px;
+        background:lightgray;}
+    </style>
+    <table>
+        <tr>
+            <td><input id="0,0"></td>
+            <td><input id="0,1"></td>
+            <td><input id="0,2"></td>
+        </tr>
+        <tr>
+            <td id="1,0"><input></td>
+            <td id="1,1"><input></td>
+            <td id="1,2"><input></td>
+        </tr>
+        <tr>
+            <td id="2,0"><input></td>
+            <td id="2,1"><input></td>
+            <td id="2,2"><input></td>
+        </tr>
+        <script>
+            var xpos = 1;
+            var ypos = 1;
+            var cur = document.getElementById(xpos+","+ypos);
+            cur.style.backgroundColor="blue";
+            cur.addEventListener('keydown',function(){
+                var code =event.keyCode;
+                if(code==38){//커서 UP
+                    //현재 위치 배경색 변경
+                    cur.style.backgroundColor="lightgray";
+                    //x축한칸 위로 이동
+                    xpos--;
+                    //위로 이동한 요소 노드 찾기
+                    cur = document.getElementById(xpos+","+ypos);
+                    //이동한 위치 배경색 변경
+                    cur.style.backgroundColor="blue";
+                }
+            })
+        </script>
+    </table>
+</body>
+</html>

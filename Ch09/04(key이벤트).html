@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        HTML 내의 이벤트속성 사용
+        onkeyup : 키를 눌렀다 뗏을때
+        onkeydown : 키를 눌렀을때
+        onkeypress : 키를 눌르고있을때
+    -->
+    
+    KEYUP : <input onkeyup="keyup(this)">
+    <hr>
+    <p id="result1"></p>
+
+    KEYDOWN : <input onkeydown="keydown(this)">
+    <hr>
+    <p id="result2"></p>
+
+    KEYPRESS : <input onkeypress="keypress(this)">
+    <hr>
+    <p id="result3"></p>
+    
+    <script>
+        function keyup(){
+            // console.log(event.target.value);
+            var result=document.getElementById("result1");
+            // result.innerHTML=event.target.value;
+            result.innerHTML=event.keyCode;
+        }
+        function keydown(){
+            var result=document.getElementById("result2");
+            // result.innerHTML=event.target.value;
+            result.innerHTML=event.keyCode;
+        }
+
+        function keypress(){
+            var result=document.getElementById("result3");
+            // result.innerHTML=event.target.value;
+            result.innerHTML=event.keyCode;
+        }
+        // 이벤트 처리순서
+        // onkeydown 이벤트처리(Virtual Code값)
+        // onkeypress 이벤트처리(ASCII Code값)
+        // onkeyup 이벤트처리
+    </script>
+</body>
+</html>

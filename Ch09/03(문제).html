@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--문제-->
+    <button id="btn1">버튼1</button> <button id="btn2">버튼2</button>
+    <hr>
+    <div id="result" style="width:300px; height:100px; border: 1px solid gray;">
+
+    </div>
+    <script>
+        //태그들을 찾아준다.
+        var btn1tg=document.getElementById("btn1");
+        var btn2tg=document.getElementById("btn2");
+        var divResult=document.getElementById("result");
+        //버튼1을 클릭할때        ->  id result에 '버튼1클릭함' 문자열이 들어감
+        btn1tg.addEventListener('click',function(){
+            divResult.innerHTML="버튼1클릭함";
+        });
+        //버튼1을 마우스Over할때  ->  id result에 '버튼1Over' 문자열이 들어감
+        btn1tg.addEventListener('mouseover',function(){
+            divResult.innerHTML="버튼1Over";
+        });
+        //버튼1을 마우스Leave할때 ->  id result에 '버튼1Leave' 문자열이 들어감
+        btn1tg.addEventListener('mouseleave',function(){
+            divResult.innerHTML="버튼1Leave";
+        });
+
+        //버튼2을 클릭할때        ->  id result에 '버튼2클릭함' 문자열이 들어감
+        btn2tg.addEventListener('click',function(){
+            divResult.innerHTML="버튼2클릭함!";
+        });
+        //버튼2을 마우스Over할때  ->  id result에 '버튼2Over' 문자열이 들어감
+        btn2tg.addEventListener('mouseover',function(){
+            divResult.innerHTML="버튼2Over";
+        });
+        //버튼2을 마우스Leave할때 ->  id result에 '버튼2Leave' 문자열이 들어감
+        btn2tg.addEventListener('mouseleave',function(){
+            divResult.innerHTML="버튼2Leave";
+        });        
+
+    </script>
+</body>
+</html>

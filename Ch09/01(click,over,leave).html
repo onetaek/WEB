@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--HTML 내 이벤트 처리 속성 사용-->
+    <style>
+        p {width:200px; height:100px; border:1px solid gray;
+        font-size:32px;}
+    </style>
+    <p id="p1" onclick="func1(this)" onmouseover="func2(this)" onmouseleave="func3(this)">기본 내용</p>
+    <!--태그 자체를 this로 받는다.-->
+    <script>
+        var p1tg=document.getElementById("p1");
+        function func1(){
+            // alert(event.type+" "+event.target);
+            event.target.innerHTML="클림함";
+        }
+
+        function func2(){
+            event.target.innerHTML ="마우스Over";
+        }
+        function func3(){
+            event.target.innerHTML ="마우스leave";
+        }
+    </script>
+</body>
+</html>
