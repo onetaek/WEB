@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TodoList</title>
     <style>
         #title{
             margin: 100px auto 0px;
@@ -17,16 +17,29 @@
         }
         input{
             width:400px;height: 30px;
+            border-style:none;
         }
         button{
             margin:5px;
             width: 70px; height: 30px; background:rgb(226, 226, 226);
+            border-style:none;
+        }
+        p{
+            width:500px; height: 35px; border:1px solid rgb(124, 124, 124);
+            font-size:25px;
+        }
+        #checkbox{
+            width:30px; height:20px; margin:5px;
         }
     </style>
     <script>
         function addToD0(){
+            ptg=document.createElement("p");
+            code = "<input type='checkbox' id='checkbox'>"
             
         }
+        var test = document.getElementById("todoList");
+        console.log();
     </script>
 </head>
 <body>
@@ -34,8 +47,13 @@
         to do list
     </div>
     <div id="search">
-        <input type="text">
+        <input type="text" id="todoList" value="dkd">
         <button onclick="addToDo()">추가</button>
     </div>
+    <div id="List">
+
+    </div>
+    <p><input type="checkbox" id="checkbox">도레미파솔</p>
+    
 </body>
 </html>

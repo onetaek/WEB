@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="startimg()">Start</button>&nbsp;
+    <button onclick="stopimg()">Stop</button>
+    <hr>
+    <div style="width:500px;height:100px; border:1px solid gray; padding:5;">
+        <img src="html.png" style="width:80px;height:80px;margin-top:5px;" id=img>
+    </div>
+    <style>
+        img{
+            position:relative;
+            top:0px;
+            left:0px;
+        }
+    </style>
+    <script>
+        w=null;
+        imgtg=document.getElementById("img");
+        function startimg(){
+            //setInterval함수로 moving함수를 2초간격으로 실행
+            w=setInterval(moving,2000);
+        }
+        function moving() {
+             //setTimeout함수로 1초후에 right함수를 실행
+             setTimeout(right,0);
+             //setTimeout함수로 2초후에 left함수를 사용
+             setTimeout(left,1000);
+        }
+        function right(){
+             //imgtg를 position right:80%설정
+             imgtg.style.left="80%";
+             //transition 속성의 1s 설정
+             imgtg.style.transition="1s"; 
+        }
+        function left(){
+            //imgtg를 position left:0%설정
+            imgtg.style.left="0%";
+            //transition 속성 1s 설정
+            imgtg.style.transition="1s"; 
+        }
+        function stopimg(){
+            //setInterval을 clear 
+            clearInterval(w);
+        }
+    </script>
+</body>
+</html>
