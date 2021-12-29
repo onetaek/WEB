@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{}
+        body{margin:0px;height:5000px;}
+        #wrapper{}
+
+        #header-meta{height:20px;background-color:wheat;margin-bottom:5px;}
+        nav{height:60px;background-color:wheat;margin-bottom:5px;
+        display:flex; padding:5px;}
+        #nav-left{width:100%; border:1px solid gray;
+            display:flex;}
+        .totalmenu{margin: 15px 0px 0px 10px; cursor:pointer;}
+        .totalmenu span{display:block;margin:5px;}
+        #top{width:35px;height:5px;background-color: black;}
+        #mid{width:35px;height:5px;background-color: black;}
+        #bottom{width:35px;height:5px;background-color: black;}
+
+        #nav-center{width:100%; border:1px solid gray;}
+        #nav-right{width:100%; border:1px solid gray;}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-meta">
+                   
+        </div>
+        <nav id="header-nav">
+            <div id="nav-left">
+                <div class="totalmenu">
+                    <span id=top></span>
+                    <span id=mid></span>
+                    <span id=bottom></span>
+                </div>
+                <div class="">
+                    <span>메뉴</span>
+                </div>
+            </div>
+            <div id="nav-center">
+                <span style="font-size: 32px;">L O G O</span>
+            </div>
+            <div id="nav-right">
+
+            </div>
+        </nav>
+    </div>
+    <script>
+        // console.log(window.innerWidth);
+        window.addEventListener('resize',function(){
+            var width=window.innerWidth;
+            var logo=document.getElementById('nav-center');
+            if(width<=396){
+                logo.style.display='none';
+            }else{
+                logo.style.display='block';
+            }
+        })
+        
+    </script>
+</body>
+</html>

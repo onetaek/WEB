@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{height:5000px;background-color:wheat;}
+        ul,li{list-style:none;}
+        header{width:100%; height:100px; background:black;}
+        #logo{float:left;width:200px; height:100px;background-color: gray;
+            text-align: center;line-height: 100px;color:white;}
+        nav{width:100%;height:50px; background:lightsalmon;}
+        ul{margin:0 auto;width:1400px;}
+        li{float:left;width:85px;height: 50px;background:white;
+        color:black;text-align: center;line-height: 50px;}
+    </style>
+    <script>
+        document.addEventListener('scroll',function(){
+            var pos = document.documentElement.scrollTop;
+            var navtg = document.getElementById("nav");
+            if(pos>=100){
+                navtg.style.position='fixed';
+                navtg.style.left='0px';
+                navtg.style.top='0px';
+                navtg.style.width="100%";
+            }else{
+                navtg.style.position='static';
+            }
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="logo">
+            로고
+        </h1>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li>BEST</li>
+            <li>NEW~45%</li>
+            <li>OUTER</li>
+            <li>SUIT</li>
+            <li>TEE/TOP</li>
+            <li>PANTS</li>
+            <li>SHIRTS</li>
+            <li>1+1</li>
+            <li>KNOT/CARDGAN</li>
+            <li>SHOES</li>
+            <li>BAG</li>
+            <li>ACC</li>
+            <li>BIG SIZE</li>
+            <li>OUTLET</li>
+        </ul>
+    </nav>
+</body>
+</html>
